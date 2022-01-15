@@ -1,8 +1,8 @@
-(define (domain route)
+(define (domain firefighter)
     (:requirements :strips)
 
     (:constants
-        traveller 
+        firefighter ladder fish tree cat bowl hydrant pillow
     )
 
     (:predicates
