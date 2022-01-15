@@ -1,27 +1,36 @@
 (define (problem save-fed-and-give-water-to-the-cat-pb)
     (:domain firefighter)
+
     (:objects
-        p1 p2 p3 p4 p5 p6 p7 firefighter ladder tree cat fish pillow hydrant
+        p1 p2 p3 p4 p5 p6 p7 p8 p9 - position
+        Dan - firefighter
+        ladder-1 - ladder
+        arbor - tree
+        cat - animal
+        dog - animal
+        fish - food
+        bowl-1 - bowl
+        bowl-2 - bowl
+        pillow-1 - pillow
+        hydrant-1 - hydrant
     )
+
     (:init
-        (position p1)
-        (position p2)
-        (position p3)
-        (position p4)
-        (position p5)
-        (position p6)
-        (position p7)
-        (at firefighter p1)
-        (on-floor firefighter)
-        (at ladder p2)
-        (at tree p5)
+        (at Dan p1)
+        (on-floor Dan)
+        (at ladder-1 p2)
+        (at arbor p5)
         (at cat p5)
         (at fish p3)
-        (at pillow p4)
-        (at hydrant p6)
-        (at bowl p7)
+        (at pillow-1 p4)
+        (at hydrant-1 p6)
+        (at bowl-1 p7)
+        (at dog p8)
+        (on-floor dog)
+        (at bowl-2 p9)
     )
+
     (:goal
-        (and (on-floor cat) (cat-is-fed) (cat-is-hydrated))
+        (and (on-floor cat) (is-fed cat) (is-hydrated cat) (is-hydrated dog))
     )
 )
