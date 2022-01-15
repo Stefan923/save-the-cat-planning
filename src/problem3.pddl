@@ -1,0 +1,27 @@
+(define (problem save-fed-and-give-water-to-the-cat-pb)
+    (:domain firefighter)
+    (:objects
+        p1 p2 p3 p4 p5 p6 p7 firefighter ladder tree cat fish pillow hydrant
+    )
+    (:init
+        (position p1)
+        (position p2)
+        (position p3)
+        (position p4)
+        (position p5)
+        (position p6)
+        (position p7)
+        (at firefighter p1)
+        (on-floor firefighter)
+        (at ladder p2)
+        (at tree p5)
+        (at cat p5)
+        (at fish p3)
+        (at pillow p4)
+        (at hydrant p6)
+        (at bowl p7)
+    )
+    (:goal
+        (and (on-floor cat) (cat-is-fed) (cat-is-hydrated))
+    )
+)
